@@ -9,7 +9,6 @@ function App() {
     <>
       <div className="p-5 bg-zinc-900 h-screen">
         <Navbar />
-      <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="/projects" element={<ProjectsPage />}/>
