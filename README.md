@@ -156,7 +156,6 @@ Get a single user (public)
 POST /api/users/register
 
 Register a new user
-Body:
 
 ``` js 
 {
@@ -170,7 +169,6 @@ POST /api/users/login
 
 Logs in a user
 Returns a JWT token
-Body:
 
 ``` js
 {
@@ -197,7 +195,6 @@ Authorization enforced: users may view only their own projects.
 POST /api/projects
 
 Create a new project
-Example body:
 
 ``` js
 {
@@ -232,7 +229,6 @@ Get all tasks for a project
 POST /api/projects/:projectId/tasks
 
 Create a new task
-Body example:
 
 ``` js
 {
@@ -284,13 +280,13 @@ Login → server returns JWT → axios attaches token → protected routes unloc
 ## Local Setup
 **Backend**
 
-npm install
-npm run dev
+1. npm install
+2. npm run dev
 
 **Frontend**
 
-npm install
-npm run dev
+1. npm install
+2. npm run dev
 
 ## Author
 
