@@ -127,18 +127,18 @@ function ProjectDetailsPage() {
               setDescription(e.target.value);
             }}
           />
-          <button type="submit" onClick={handleTaskForm}>
+          <button type="submit" onClick={handleTaskForm} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 text-center self-center rounded">
             Create Task
           </button>
         </form>
-        <div className="border border-red-500 m-3">
+        <div className="border border-indigo-500 m-3">
             <h2 className="text-center text-xl">Existing Tasks</h2>
             <div className="grid grid-cols-2 gap-5">
             {tasks &&
                 tasks.map((task) => (
                 <div
                     key={task._id}
-                    className="text-white text-center flex flex-col gap-3 border m-5 border-red-500"
+                    className="text-white text-center flex flex-col gap-3 border m-5 border-blue-500"
                 >
                     {editingTaskId === task._id ? (
                     <>
@@ -161,10 +161,10 @@ function ProjectDetailsPage() {
                         <option value="in-progress">In Progress</option>
                         <option value="done">Done</option>
                         </select>
-                        <button onClick={() => saveTaskChanges(task._id)}>
+                        <button onClick={() => saveTaskChanges(task._id)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
                         Save Changes
                         </button>
-                        <button onClick={() => setEditingTaskId(null)}>
+                        <button onClick={() => setEditingTaskId(null)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
                         Cancel
                         </button>
                     </>
@@ -173,11 +173,11 @@ function ProjectDetailsPage() {
                         <div className="font-bold">{task.title}</div>
                         <div>{task.description}</div>
                         <div className="flex flex-row justify-around gap-5">
-                        <button onClick={() => deleteTask(task._id)}>
+                        <button onClick={() => deleteTask(task._id)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
                             Delete
                         </button>
                         <div>{task.status}</div>
-                        <button onClick={() => startEditing(task)}>Edit</button>
+                        <button onClick={() => startEditing(task)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">Edit</button>
                         </div>
                     </>
                     )}

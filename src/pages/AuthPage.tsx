@@ -47,26 +47,26 @@ const registerFormSubmit = async (e: FormEvent) => {
 return (
     <>
     {isSignIn == true &&
-        <div>
-            <form>
-                <input name="loginUser" value={userName} placeholder="Enter username..." onChange={() => setUserName}/>
-                <input name="loginEmail" value={email} placeholder="Enter email..." onChange={() => setEmail}/>
-                <input type="password" value={password} name="loginPassword" placeholder="Enter password..." onChange={() => setPassword}/>
-                <button type="submit" onClick={() => loginFormSubmit}>Login</button>
-                <button onClick={() => setIsSignIn(false)}>Register</button>
+        <div className="flex justify-center mt-10">
+            <form className="text-white flex flex-col border border-blue-500 w-75 align-center justify-center gap-6 p-5">
+                <input name="loginUser" value={userName} placeholder="Enter username..." onChange={(e) => setUserName(e.target.value)}/>
+                <input name="loginEmail" value={email} placeholder="Enter email..." onChange={(e) => setEmail(e.target.value)}/>
+                <input type="password" value={password} name="loginPassword" placeholder="Enter password..." onChange={(e) => setPassword(e.target.value)}/>
+                <button type="submit" onClick={(e) => loginFormSubmit(e)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center">Login</button>
+                <button onClick={() => setIsSignIn(false)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white p-3 w-50 justify-self-center self-center">New User?</button>
             </form>
 
         </div>
         }
             {isSignIn == false &&
-        <div>
-            <form>
-                <input name="registerUser" placeholder="Enter username..." onChange={() => setUserName}/>
-                <input name="registerEmail" placeholder="Enter email..." onChange={() => setEmail}/>
-                <input name="registerPassword" placeholder="Enter password..." onChange={() => setPassword}/>
-                <input name="confirmPassword" placeholder="Confirm password..." onChange={() => setConfirmPassword}/>
-                <button type="submit" onClick={() => registerFormSubmit}>Login</button>
-                <button onClick={() => setIsSignIn(true)}>Login</button>
+        <div className="flex justify-center mt-10">
+            <form className="text-white flex flex-col border border-blue-500 w-75 align-center justify-center gap-6 p-5">
+                <input name="registerUser" placeholder="Enter username..." onChange={(e) => setUserName(e.target.value)}/>
+                <input name="registerEmail" placeholder="Enter email..." onChange={(e) => setEmail(e.target.value)}/>
+                <input name="registerPassword" placeholder="Enter password..." onChange={(e) => setPassword(e.target.value)}/>
+                <input name="confirmPassword" placeholder="Confirm password..." onChange={(e) => setConfirmPassword(e.target.value)}/>
+                <button type="submit" onClick={(e) => registerFormSubmit(e)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center">Login</button>
+                <button onClick={() => setIsSignIn(true)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white p-3 w-50 justify-self-center self-center">Existing User?</button>
             </form>
 
         </div>
