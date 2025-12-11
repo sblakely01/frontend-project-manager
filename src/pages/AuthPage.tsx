@@ -1,6 +1,5 @@
 import { useState, useContext, type FormEvent } from 'react';
 import { AuthContext } from '../context/AuthProvider';
-import { apiClient } from '../clients/api';
 import { useNavigate } from 'react-router-dom';
 
 function AuthPage () {
@@ -20,6 +19,7 @@ const loginFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
         setError("");
+        console.log(error);
         if (!email || !password) return;
         logIn(email, password);
         navigate('/projects');

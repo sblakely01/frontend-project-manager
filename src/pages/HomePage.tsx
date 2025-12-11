@@ -7,6 +7,7 @@ function HomePage() {
     const navigate = useNavigate();
 
     const handleClickEvent = (e: EventTarget) => {
+        console.log(e);
         navigate('/auth');
     }
 
