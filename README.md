@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# Project Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Project Manager Application that allows users to create projects and tasks.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+ - [Screenshot](#screenshot)
+ - [Deployment](#deployment)
+ - [Features](#features)
+ - [Built-with](#built-with)
+- [Author](#author)
 
-## React Compiler
+## Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Deployment:
 
-Note: This will impact Vite dev & build performances.
+### Frontend:
 
-## Expanding the ESLint configuration
+- https://sb-project-manager.netlify.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Backend:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- https://project-manager-7pq4.onrender.com/
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Screenshot:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![](./Screenshot%202025-12-11%20121813.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Authentication:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Users have a login page that is managed by JWT tokens
+- Users register using a username, email, and password
+
+#### Authorization:
+
+- Context and protected endpoints allow users to only access projects and tasks that belong to them
+
+#### CRUD Operations:
+
+- Users can Create, Read, Update and Delete projects and tasks
+
+### Built with
+
+- HTML5
+- TypeScript
+- TailwindCSS [TailWindCSS](https://tailwindcss.com/docs/)
+- MongoDB
+- Mongoose
+- Express
+
+
+## Author
+
+- Website - [Stephanye Blakely](https://www.stephanyeblakely.com)
+- LinkedIn - [Stephanye-Blakely](https://www.linkedIn.com/in/stephanye-blakely)
