@@ -76,7 +76,7 @@ function ProjectsPage() {
         <input
           type="submit"
           value="Create Project"
-          className="mt-auto bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white rounded"
+          className="mt-auto bg-cyan-500 shadow-lg font-bold shadow-cyan-500/50 text-white rounded hover:bg-cyan-200 hover:text-black"
         />
       </form>
 
@@ -87,13 +87,15 @@ function ProjectsPage() {
           projects.map((project) => (
             <div
               key={project._id}
-              className="text-white w-50 flex flex-col h-50 border border-blue-500 p-2 text-center rounded"
+              className="text-white w-70 flex flex-col h-50 border border-blue-500 p-2 text-center rounded"
             >
               <div className="font-bold">{project.name}</div>
               <div>{project.description}</div>
+               <button className="mt-auto font-bold bg-emerald-300 shadow-lg shadow-emerald-300/50 text-white rounded hover:bg-emerald-100 hover:text-black">Delete Project</button>
+              <button className="mt-auto bg-cyan-500 font-bold shadow-lg shadow-cyan-500/50 text-white rounded hover:bg-cyan-200 hover:text-black">Edit Project</button>
               <Link
                 to={`/projects/${project._id}`}
-                className="mt-auto bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white rounded"
+                className="mt-auto bg-indigo-500 shadow-lg font-bold shadow-indigo-500/50 text-white rounded hover:bg-indigo-200 hover:text-black"
               >
                 See Project
               </Link>

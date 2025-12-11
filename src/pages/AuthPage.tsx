@@ -52,8 +52,8 @@ return (
                 <input name="loginUser" value={userName} placeholder="Enter username..." onChange={(e) => setUserName(e.target.value)}/>
                 <input name="loginEmail" value={email} placeholder="Enter email..." onChange={(e) => setEmail(e.target.value)}/>
                 <input type="password" value={password} name="loginPassword" placeholder="Enter password..." onChange={(e) => setPassword(e.target.value)}/>
-                <button type="submit" onClick={(e) => loginFormSubmit(e)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center">Login</button>
-                <button onClick={() => setIsSignIn(false)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white p-3 w-50 justify-self-center self-center">New User?</button>
+                <button type="submit" onClick={(e) => loginFormSubmit(e)} className="bg-indigo-500 font-bold shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center hover:bg-indigo-200 hover:text-black">Login</button>
+                <button onClick={() => setIsSignIn(false)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 font-bold text-white p-3 w-50 justify-self-center self-center hover:bg-cyan-200 hover:text-black">New User?</button>
             </form>
 
         </div>
@@ -65,8 +65,8 @@ return (
                 <input name="registerEmail" placeholder="Enter email..." onChange={(e) => setEmail(e.target.value)}/>
                 <input name="registerPassword" placeholder="Enter password..." onChange={(e) => setPassword(e.target.value)}/>
                 <input name="confirmPassword" placeholder="Confirm password..." onChange={(e) => setConfirmPassword(e.target.value)}/>
-                <button type="submit" onClick={(e) => registerFormSubmit(e)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center">Login</button>
-                <button onClick={() => setIsSignIn(true)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white p-3 w-50 justify-self-center self-center">Existing User?</button>
+                <button type="submit" onClick={(e) => registerFormSubmit(e)} className="bg-indigo-500 font-bold shadow-lg shadow-indigo-500/50 text-white p-3 w-50 justify-self-center self-center hover:bg-indigo-200 hover:text-black">Login</button>
+                <button onClick={() => setIsSignIn(true)} className="bg-cyan-500 shadow-lg shadow-cyan-500/50 font-bold text-white p-3 w-50 justify-self-center self-center hover:bg-cyan-200 hover:text-black">Existing User?</button>
             </form>
 
         </div>

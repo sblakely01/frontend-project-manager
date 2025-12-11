@@ -127,11 +127,11 @@ function ProjectDetailsPage() {
               setDescription(e.target.value);
             }}
           />
-          <button type="submit" onClick={handleTaskForm} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 text-center self-center rounded">
+          <button type="submit" onClick={handleTaskForm} className="text-white font-bold w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/50 p-2 text-center self-center rounded p-2 m-2 hover:bg-cyan-200 hover:text-black">
             Create Task
           </button>
         </form>
-        <div className="border border-indigo-500 m-3">
+        <div className="border border-emerald-300 m-3">
             <h2 className="text-center text-xl">Existing Tasks</h2>
             <div className="grid grid-cols-2 gap-5">
             {tasks &&
@@ -161,10 +161,10 @@ function ProjectDetailsPage() {
                         <option value="in-progress">In Progress</option>
                         <option value="done">Done</option>
                         </select>
-                        <button onClick={() => saveTaskChanges(task._id)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
+                        <button onClick={() => saveTaskChanges(task._id)} className="text-white font-bold w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/50 p-2 m-2 text-center rounded hover:bg-cyan-200 hover:text-black">
                         Save Changes
                         </button>
-                        <button onClick={() => setEditingTaskId(null)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
+                        <button onClick={() => setEditingTaskId(null)} className="text-white w-50 flex font-bold flex-col bg-cyan-500 shadow-lg shadow-cyan-500/50 p-2 m-2 text-center rounded hover:bg-cyan-200 hover:text-black">
                         Cancel
                         </button>
                     </>
@@ -173,11 +173,11 @@ function ProjectDetailsPage() {
                         <div className="font-bold">{task.title}</div>
                         <div>{task.description}</div>
                         <div className="flex flex-row justify-around gap-5">
-                        <button onClick={() => deleteTask(task._id)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">
+                        <button onClick={() => deleteTask(task._id)} className="text-white w-50 flex font-bold flex-col bg-cyan-500 shadow-lg shadow-cyan-500/50 p-2 m-2 text-center rounded hover:bg-cyan-200 hover:text-black">
                             Delete
                         </button>
                         <div>{task.status}</div>
-                        <button onClick={() => startEditing(task)} className="text-white w-50 flex flex-col bg-cyan-500 shadow-lg shadow-cyan-500/5 p-2 m-2 text-center rounded">Edit</button>
+                        <button onClick={() => startEditing(task)} className="text-white w-50 flex flex-col font-bold bg-cyan-500 shadow-lg shadow-cyan-500/50 p-2 m-2 text-center rounded hover:bg-cyan-200 hover:text-black">Edit</button>
                         </div>
                     </>
                     )}
